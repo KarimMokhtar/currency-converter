@@ -10,9 +10,47 @@
   margin-top: 5px;
   color: white;
 }
-.large-curr {
+.currency-flag {
   border-radius: 50%;
+  background-position: center;
+}
+.currency-flag.large-curr {
   width: 220px !important;
   height: 220px !important;
-  background-position: center;
+}
+
+.currency-flag.small-curr {
+  width: 50px !important;
+  height: 50px !important;
+}
+.prices-container {
+  position: relative;
+}
+
+.prices {
+  width: 100%;
+  position: absolute;
+  top: -30px;
+}
+
+.curr-card {
+  max-width: 80%;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin: auto;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.curr-card > div {
+  display: flex;
+  align-items: center;
+}
+
+.curr-card span {
+  margin-left: 10px;
 }

@@ -1,18 +1,31 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { getData } from "../api/api";
 import RoundedImage from "../components/RoundedImage";
+import SubCurrCard from "../components/SubCurrCard";
 const BASE_CURR = "EUR";
 
 const Home = () => {
+  const [rates, setRates] = useState([]);
   useEffect(() => {
-    fetch(`http://data.fixer.io/api/latest?access_key=${process.env.ACCESS_KEY}`);
+    async function fetchData() {
+      const data = await getData();
+      setRates(data);
+    }
+    fetchData();
   }, []);
   return (
     <div>
       <div className="base-container">
-        <RoundedImage currency={BASE_CURR} />
+        <RoundedImage type="main" currency={BASE_CURR} />
         <h2>{BASE_CURR}</h2>
       </div>
-      <div></div>
+      <div className="prices-container">
+        <div className="prices">
+          {rates.map(({ curr, price }) => (
+            <SubCurrCard key={curr} curr={curr} price={price} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
