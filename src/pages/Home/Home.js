@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { getData } from "../api/api";
-import RoundedImage from "../components/RoundedImage";
-import SubCurrCard from "../components/SubCurrCard";
+import { getData } from "../../api/api";
+import RoundedImage from "../../components/RoundedImage";
+import SubCurrCard from "../../components/SubCurrCard";
+import './style.css'
 const BASE_CURR = "EUR";
 
 const Home = () => {

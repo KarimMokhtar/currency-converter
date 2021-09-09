@@ -2,55 +2,11 @@
   text-align: center;
   min-height: 100vh;
 }
-.base-container {
-  padding: 40px 0;
-  background-color: hsl(214deg 52% 38%);
-}
-.base-container h2 {
-  margin-top: 5px;
-  color: white;
-}
-.currency-flag {
-  border-radius: 50%;
-  background-position: center;
-}
-.currency-flag.large-curr {
-  width: 220px !important;
-  height: 220px !important;
-}
 
-.currency-flag.small-curr {
-  width: 50px !important;
-  height: 50px !important;
+a {
+  text-decoration: none;
+  color: black;
 }
-.prices-container {
-  position: relative;
-}
-
-.prices {
-  width: 100%;
-  position: absolute;
-  top: -30px;
-}
-
-.curr-card {
-  max-width: 80%;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.11);
-  border-radius: 5px;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  margin: auto;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-
-.curr-card > div {
-  display: flex;
-  align-items: center;
-}
-
-.curr-card span {
-  margin-left: 10px;
+a:visited {
+  color: black;
 }
