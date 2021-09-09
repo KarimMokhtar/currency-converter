@@ -13,14 +13,13 @@
   justify-content: flex-end;
   box-sizing: border-box;
 }
-/* Chrome, Safari, Edge, Opera */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -34,6 +33,10 @@ input[type=number] {
   display: inline-block;
   margin-right: 10px;
   outline: none;
+}
+.converter-container span{
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 325px) {
   .converter-container input {
