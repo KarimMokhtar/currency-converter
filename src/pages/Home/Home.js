@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 import { getData } from "../../api/api";
 import RoundedImage from "../../components/RoundedImage";
 import SubCurrCard from "../../components/SubCurrCard";
-import './style.css'
-const BASE_CURR = "EUR";
+import { BASE_CURR } from "../../constants";
+import "./style.css";
 
 const Home = () => {
   const [rates, setRates] = useState([]);
   useEffect(() => {
     async function fetchData() {
-      const data = await getData();
+      const rates = await getData();
+      const data = Object.keys(rates).map(key => ({ curr: key, price: rates[key] }));
       setRates(data);
+      localStorage["rates"] = JSON.stringify(rates);
     }
     fetchData();
   }, []);
